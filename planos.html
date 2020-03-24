@@ -1,0 +1,518 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Ubuntu, sans-serif;
+    }
+    #tabs {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #c21331;
+    }
+
+    #tabs a {
+      flex-grow: 1;
+      padding: 15px 25px;
+      color: #c21331;
+      text-align: center;
+      font-size: 21px;
+      margin: 0 1px;
+      background:#DDD;
+      border-radius: 5px 5px 0 0;
+      text-decoration: none;
+    }
+    #tabs a.active {
+      color: #FFF;
+      background: #c21331;
+    }
+
+    #tab-content h3 {
+      padding: 5px;
+      color: #444;
+      border-bottom: 1px solid #DDD;
+    }
+
+    #tab-content ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding:0;
+    }
+    #tab-content li {
+      width: 100px;
+      height: 90px;
+      margin: 10px;
+      padding: 0;
+      text-align: center;
+      list-style: none;
+      opacity: .2;
+      border: 1px solid #eee;
+      transition: all .5s cubic-bezier(0.2, 1, 0.2, 1.4);
+    }
+    #tab-content li img {
+      display: block;
+      width:100%;
+      margin-bottom: 2px;
+      -webkit-filter: grayscale(100);
+      filter: grayscale(100);
+      transition: all .5s cubic-bezier(0.2, 1, 0.2, 1.4);
+    }
+    #tab-content li span {
+      display: block;
+      padding: 0 5px;
+      font-size: 11px;
+      line-height: 12px;
+      font-style: italic;
+      color: #777;
+    }
+    #tab-content li.active {
+      opacity: 1;
+    }
+    #tab-content li.active img {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  </style>
+</head>
+<body>
+  <div id="tabs">
+    <a href="#basico">Básico</a>
+    <a href="#essencial">Essencial</a>
+    <a href="#total">Total</a>
+    <a href="#prime" class="active">Prime</a>
+  </div>
+  <div id="tab-content">
+    <div class="tab-category">
+      <h3>Principais</h3>
+      <ul>
+        <li class="basico essencial total prime">
+          <img src="images/logo-cligtv.png" alt="C-lig TV HD">
+          <span>C-lig TV HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-terraviva.png" alt="Terra Viva HD">
+          <span>Terra Viva HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-canaldoboi.png" alt="Canal do Boi">
+          <span>Canal do Boi</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-conexaobr.png"" alt="Conexão BR">
+          <span>Conexão BR</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-agrocanal.png" alt="Agro Canal">
+          <span>Agro Canal</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-polishop.png" alt="Polishop">
+          <span>Polishop</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-polishop.png" alt="Polishop 2">
+          <span>Polishop 2</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-polishop.png" alt="Polishop 3">
+          <span>Polishop 3</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-redeseculo21.png" alt="Rede Século 21 HD">
+          <span>Rede Século 21 HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-redevida.png" alt="Rede Vida HD">
+          <span>Rede Vida HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-aparecida.png" alt="TV Aparecida HD">
+          <span>TV Aparecida HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-cancaonova.png" alt="Canção Nova HD">
+          <span>Canção Nova HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvmundomaior.png" alt="TV Mundo Maior">
+          <span>TV Mundo Maior</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-recordnews.png" alt="Record News HD">
+          <span>Record News HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvgazeta.png" alt="TV Gazeta HD">
+          <span>TV Gazeta HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-cinemais.png" alt="Cine+">
+          <span>Cine+</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-redetv.png" alt="Rede TV HD">
+          <span>Rede TV HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-redecnt.png" alt="CNT HD">
+          <span>CNT HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvbrasilcentral.png" alt="TV Brasil Central HD">
+          <span>TV Brasil Central HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-sbt.png" alt="SBT HD">
+          <span>SBT HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvclube.png" alt="TV Clube HD - Band">
+          <span>TV Clube HD - Band</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-recordtv.png" alt="Record TV HD">
+          <span>Record TV HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-ngt.png" alt="NGT">
+          <span>NGT</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-sesctv.png" alt="SESC TV HD">
+          <span>SESC TV HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-boavontadetv.png" alt="Boa Vontade TV HD">
+          <span>Boa Vontade TV HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvcultura.png" alt="TV Cultura HD">
+          <span>TV Cultura HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvesaocarlos.png" alt="TVE São Carlos">
+          <span>TVE São Carlos</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-rbitv.png" alt="RBI HD">
+          <span>RBI HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-canal21.png" alt="Canal 21">
+          <span>Canal 21</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-redefamilia.png" alt="Rede Família HD">
+          <span>Rede Família HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-rit.png" alt="RIT HD">
+          <span>RIT HD</span>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-category">
+      <h3>Públicos</h3>
+      <ul>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvcamara.png" alt="TV Câmara HD">
+          <span>TV Câmara HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvsenado.png" alt="TV Senado HD">
+          <span>TV Senado HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvjustica.png" alt="TV Justiça HD">
+          <span>TV Justiça HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvbrasil.png" alt="TV Brasil HD">
+          <span>TV Brasil HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-nbr.png" alt="NBR HD">
+          <span>NBR HD</span>
+        </li>
+        <li class="basico essencial total prime">
+          <img src="images/logo-tvescola.png" alt="TV Escola HD">
+          <span>TV Escola HD</span>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-category">
+      <h3>Notícias</h3>
+      <ul>
+        <li class="essencial total prime">
+          <img src="images/logo-bandnews.png" alt="BandNews">
+          <span>BandNews</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-cnnbrasil.png" alt="CNN Brasil">
+          <span>CNN Brasil</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-cnn.png" alt="CNN I">
+          <span>CNN I</span>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-category">
+      <h3>Cultura</h3>
+      <ul>
+        <li class="essencial total prime">
+          <img src="images/logo-discoverychannel.png" alt="Discovery Channel HD">
+          <span>Discovery Channel HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-discoverytheater.png" alt="Discovery Theater HD">
+          <span>Discovery Theater HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-animalplanet.png" alt="Animal Planet HD">
+          <span>Animal Planet HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-discoveryworld.png" alt="Discovery World HD">
+          <span>Discovery World HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-discoveryscience.png" alt="Discovery Science HD">
+          <span>Discovery Science HD</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-natgeo.png" alt="Nat Geo HD">
+          <span>Nat Geo HD</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-arte1.png" alt="Arte 1">
+          <span>Arte 1</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-cinebrasiltv.png" alt="Cinebrasil TV">
+          <span>Cinebrasil TV</span>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-category">
+      <h3>Variedades</h3>
+      <ul>
+        <li class="essencial total prime">
+          <img src="images/logo-discoveryhomeandhealth.png" alt="Discovery Home & Health HD">
+          <span>Discovery Home & Health HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-discoveryturbo.png" alt="Discovery Turbo HD">
+          <span>Discovery Turbo HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-investigacaodiscovery.png" alt="ID - Investigação Discovery HD">
+          <span>ID - Investigação Discovery HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-tlc.png" alt="TLC">
+          <span>TLC</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-foxlife.png" alt="Fox Life HD">
+          <span>Fox Life HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-hgtv.png" alt="HGTV HD">
+          <span>HGTV HD</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-mtv.png" alt="MTV HD">
+          <span>MTV HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-comedycentral.png" alt="Comedy Central HD">
+          <span>Comedy Central HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-vh1megahits.png" alt="Vh1 Mega Hits">
+          <span>Vh1 Mega Hits</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-cheftv.png" alt="Chef TV">
+          <span>Chef TV</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-woohoo.png" alt="Woohoo">
+          <span>Woohoo</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-musicboxbrazil.png" alt="Music Box Brazil">
+          <span>Music Box Brazil</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-fishtv.png" alt="Fish TV">
+          <span>Fish TV</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-travelboxbrazil.png" alt="Travel Box Brazil HD">
+          <span>Travel Box Brazil HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-playtv.png" alt="Play TV">
+          <span>Play TV</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-fashiontv.png" alt="Fashion TV Brazil">
+          <span>Fashion TV Brazil</span>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-category">
+      <h3>Infantil</h3>
+      <ul>
+        <li class="essencial total prime">
+          <img src="images/logo-cartoonnetwork.png" alt="Cartoon Network HD">
+          <span>Cartoon Network HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-nickelodeon.png" alt="Nickelodeon HD">
+          <span>Nickelodeon HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-nickjr.png" alt="Nick Jr HD">
+          <span>Nick Jr HD</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-discoverykids.png" alt="Discovery Kids HD">
+          <span>Discovery Kids HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-zoomoo.png" alt="Zoomoo">
+          <span>Zoomoo</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-disneychannel.png" alt="Disney Channel HD">
+          <span>Disney Channel HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-tooncast.png" alt="Tooncast">
+          <span>Tooncast</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-disneyxd.png" alt="Disney XD">
+          <span>Disney XD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-boomerang.png" alt="Boomerang">
+          <span>Boomerang</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-disneyjr.png" alt="Disney Jr HD">
+          <span>Disney Jr HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-tvratimbum.png" alt="TV Ra Tim Bum HD">
+          <span>TV Ra Tim Bum HD</span>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-category">
+      <h3>Esporte</h3>
+      <ul>
+        <li class="essencial total prime">
+          <img src="images/logo-espn.png" alt="ESPN HD">
+          <span>ESPN HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-espnbrasil.png" alt="ESPN Brasil HD">
+          <span>ESPN Brasil HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-espn2.png" alt="ESPN 2 HD">
+          <span>ESPN 2 HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-espnextra.png" alt="ESPN Extra HD">
+          <span>ESPN Extra HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-foxsports.png" alt="FOX Sports HD">
+          <span>FOX Sports HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-foxsports2.png" alt="FOX Sports 2 HD">
+          <span>FOX Sports 2 HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-bandsports.png" alt="BandSports">
+          <span>BandSports</span>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-category">
+      <h3>Filmes e Séries</h3>
+      <ul>
+        <li class="essencial total prime">
+          <img src="images/logo-tnt.png" alt="TNT HD">
+          <span>TNT HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-tntseries.png" alt="TNT Séries HD">
+          <span>TNT Séries HD</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-fox.png" alt="FOX HD">
+          <span>FOX HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-fx.png" alt="FX HD">
+          <span>FX HD</span>
+        </li>
+        <li class="essencial total prime">
+          <img src="images/logo-primeboxbrazil.png" alt="Prime Box Brazil">
+          <span>Prime Box Brazil</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-tcm.png" alt="TCM">
+          <span>TCM</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-space.png" alt="Space HD">
+          <span>Space HD</span>
+        </li>
+        <li class="total prime">
+          <img src="images/logo-tbs.png" alt="TBS HD">
+          <span>TBS HD</span>
+        </li>
+        <li class="prime">
+          <img src="images/logo-paramount.png" alt="Paramount Channel HD">
+          <span>Paramount Channel HD</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+
+      $('.tab-category ul li.prime').addClass('active');
+
+      $('#tabs a').on('click', function(event){
+        event.preventDefault();
+        $('#tabs a').removeClass('active');
+        $(this).addClass('active');
+
+        var active = $(this).attr('href');
+        active = active.replace('#','');
+
+        $('.tab-category ul li').removeClass('active');
+        $('.tab-category ul li.' + active).addClass('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
